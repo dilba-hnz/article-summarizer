@@ -6,7 +6,7 @@ use App\Domain\Interfaces\SummarizerInterface;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
-class SummarizerArticleService implements SummarizerInterface
+class SummarizerService implements SummarizerInterface
 {
 
     public function summarize(string $text): string

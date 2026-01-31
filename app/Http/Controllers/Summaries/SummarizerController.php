@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Summaries;
 
 use App\Actions\SummarizeArticleAction;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Summaries\SummarizeRequest;
+use App\Http\Requests\TextRequest;
 
 class SummarizerController extends Controller
 {
-    public function summarize(SummarizeRequest $request, SummarizeArticleAction $action)
+    public function summarize(TextRequest $request, SummarizeArticleAction $action)
     {
         $data = $request->validated();
 
