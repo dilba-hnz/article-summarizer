@@ -12,8 +12,8 @@ class AnalyzeController extends Controller
     {
         $data = $request->validated();
 
-        return response()->json([
+        return response()->json(
             $action->handle($data['text'])
-        ]);
+        );
     }
 }
