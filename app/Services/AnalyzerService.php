@@ -3,13 +3,13 @@
 namespace App\Services;
 
 use App\Domain\Interfaces\AnalyzerInterface;
-use App\Domain\Interfaces\JsonParserInterface;
+use App\Domain\Interfaces\LLMResponseParserInterface;
 use Illuminate\Support\Facades\Http;
 
 class AnalyzerService implements AnalyzerInterface
 {
 
-    public function __construct(private JsonParserInterface $jsonParser)
+    public function __construct(private LLMResponseParserInterface $parser)
     {
     }
 
@@ -47,7 +47,7 @@ PROMPT;
 
         $output = $response[0]['summary_text'] ?? '';
 
-        return $this->jsonParser->parseAnalyzerPrompt($output);
+        return $this->parser->parseAnalyzerPrompt($output);
     }
 
 }

@@ -2,7 +2,7 @@
 
 namespace App\Domain\Interfaces;
 
-interface JsonParserInterface
+interface LLMResponseParserInterface
 {
     public function parseAnalyzerPrompt(string $input): array;
 }

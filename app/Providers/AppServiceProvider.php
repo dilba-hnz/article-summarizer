@@ -3,10 +3,10 @@
 namespace App\Providers;
 
 use App\Domain\Interfaces\AnalyzerInterface;
-use App\Domain\Interfaces\JsonParserInterface;
+use App\Domain\Interfaces\LLMResponseParserInterface;
 use App\Domain\Interfaces\SummarizerInterface;
 use App\Services\AnalyzerService;
-use App\Services\JsonParserService;
+use App\Services\LLMResponseParserService;
 use App\Services\SummarizerService;
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(SummarizerInterface::class, SummarizerService::class);
         $this->app->bind(AnalyzerInterface::class, AnalyzerService::class);
-        $this->app->bind(JsonParserInterface::class, JsonParserService::class);
+        $this->app->bind(LLMResponseParserInterface::class, LLMResponseParserService::class);
     }
 
     /**

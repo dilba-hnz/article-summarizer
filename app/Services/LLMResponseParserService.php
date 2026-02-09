@@ -2,9 +2,9 @@
 
 namespace App\Services;
 
-use App\Domain\Interfaces\JsonParserInterface;
+use App\Domain\Interfaces\LLMResponseParserInterface;
 
-class JsonParserService implements JsonParserInterface
+class LLMResponseParserService implements LLMResponseParserInterface
 {
     public function parseAnalyzerPrompt(string $input): array
     {
